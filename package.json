@@ -10,6 +10,7 @@
     "lint-fix": "tslint -c tslint.json src/**/*.ts --fix",
     "build": "tsc -p ./tsconfig.json && cp src/ripemd.es5.js dist/ripemd.js",
     "build-web": "webpack",
+    "build-prod": "webpack --config webpack.prod.js",
     "clean": "rm -rf dist",
     "docs-init": "sh .docs/scripts/init.sh",
     "docs-build": "sh .docs/scripts/build.sh",
