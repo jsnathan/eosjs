@@ -2,11 +2,11 @@ const path = require('path');
 
 module.exports = {
     entry: {
-        eosjs: './src/eosjs-api.ts',
-        eosjs_jsonrpc: './src/eosjs-jsonrpc.ts',
+        eosjs_api: './src/eosjs-api.ts',
+        eosjs_jsonrpc: './src/rpc-web.ts',
         eosjs_jssig: './src/eosjs-jssig.ts',
     },
-    mode: "production",
+    mode: 'production',
     module: {
         rules: [
             {
@@ -14,7 +14,7 @@ module.exports = {
                 use: {
                     loader: 'ts-loader',
                     options: {
-                        configFile: 'tsconfig.json'
+                        configFile: 'tsconfig.web.json'
                     }
                 },
                 exclude: /node_modules/,
